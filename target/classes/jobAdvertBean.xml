@@ -1,0 +1,90 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="c1" class="com.model.CompanyInfo">
+		<property name="companyID" value="c1"></property>
+		<property name="companyName" value="Samsung"></property>
+		<property name="companyEmail" value="samsung@gmail.com"></property>
+	</bean>
+
+	<bean id="c2" class="com.model.CompanyInfo">
+		<property name="companyID" value="c1"></property>
+		<property name="companyName" value="Apple"></property>
+		<property name="companyEmail" value="apple@gmail.com"></property>
+	</bean>
+	
+	<bean id="j1" class="com.model.JobAdvert">
+		<property name="jobID" value="j1"></property>
+		<property name="roleName" value="SDE-2"></property>
+		<property name="salaryMin" value="5000"></property>
+		<property name="salaryMax" value="7000"></property>
+		<property name="location" value="Bangalore"></property>
+		<property name="keywords" value="java,rest,aws"></property>
+		<property name="companyInfo" ref="c1"></property>
+	</bean>
+	
+	<bean id="j2" class="com.model.JobAdvert">
+		<property name="jobID" value="j2"></property>
+		<property name="roleName" value="SDE-1"></property>
+		<property name="salaryMin" value="2000"></property>
+		<property name="salaryMax" value="5000"></property>
+		<property name="location" value="Bangalore"></property>
+		<property name="keywords" value="java,rest"></property>
+		<property name="companyInfo" ref="c1"></property>
+	</bean>
+	
+	<bean id="j3" class="com.model.JobAdvert">
+		<property name="jobID" value="j3"></property>
+		<property name="roleName" value="SDE-3"></property>
+		<property name="salaryMin" value="5000"></property>
+		<property name="salaryMax" value="15000"></property>
+		<property name="location" value="Delhi"></property>
+		<property name="keywords" value="java,rest,aws,spring"></property>
+		<property name="companyInfo" ref="c1"></property>
+	</bean>
+	
+	<bean id="j4" class="com.model.JobAdvert">
+		<property name="jobID" value="j4"></property>
+		<property name="roleName" value="SDE-1"></property>
+		<property name="salaryMin" value="5000"></property>
+		<property name="salaryMax" value="10000"></property>
+		<property name="location" value="Bangalore"></property>
+		<property name="keywords" value="java,rest"></property>
+		<property name="companyInfo" ref="c2"></property>
+	</bean>
+	
+	<bean id="j5" class="com.model.JobAdvert">
+		<property name="jobID" value="j5"></property>
+		<property name="roleName" value="SDE-2"></property>
+		<property name="salaryMin" value="7000"></property>
+		<property name="salaryMax" value="15000"></property>
+		<property name="location" value="Delhi"></property>
+		<property name="keywords" value="python,aws"></property>
+		<property name="companyInfo" ref="c2"></property>
+	</bean>
+	
+	<bean id="j6" class="com.model.JobAdvert">
+		<property name="jobID" value="j6"></property>
+		<property name="roleName" value="Python Developer"></property>
+		<property name="salaryMin" value="5000"></property>
+		<property name="salaryMax" value="10000"></property>
+		<property name="location" value="Delhi"></property>
+		<property name="keywords" value="python,spring"></property>
+		<property name="companyInfo" ref="c2"></property>
+	</bean>
+	
+	<bean id="j7" class="com.model.JobAdvert">
+		<property name="jobID" value="j7"></property>
+		<property name="roleName" value="SDE-2"></property>
+		<property name="salaryMin" value="7000"></property>
+		<property name="salaryMax" value="15000"></property>
+		<property name="location" value="Delhi"></property>
+		<property name="keywords" value="java,rest,python"></property>
+		<property name="companyInfo" ref="c2"></property>
+	</bean>
+
+</beans>
